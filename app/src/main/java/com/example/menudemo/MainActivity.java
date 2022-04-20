@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.main_option_1:
                 Log.d("==>", "Selected option 1");
 
-                Intent intent = new Intent(this,OptionOne.class);
+                Intent intent = new Intent(this, OptionOneActivity.class);
                 startActivity(intent);
                 return true;
             case R.id.main_option_2:
