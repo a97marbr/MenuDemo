@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MenuDemo">
         <activity
+            android:name=".OptionTwoActivity"
+            android:exported="false" />
+        <activity
             android:name=".OptionOneActivity"
             android:exported="false" />
         <activity
