@@ -3,6 +3,7 @@ package com.example.menudemo;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -29,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.main_option_1:
                 Log.d("==>", "Selected option 1");
+
+                Intent intent = new Intent(this,OptionOne.class);
+                startActivity(intent);
                 return true;
             case R.id.main_option_2:
                 Log.d("==>", "Selected option 2");
