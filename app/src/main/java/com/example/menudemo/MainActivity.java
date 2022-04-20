@@ -1,6 +1,7 @@
 package com.example.menudemo;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d("==>", "MainActivity created");
     }
 
     @Override
@@ -23,6 +25,36 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
         return true;
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        Log.d("==>", "MainActivity post created");
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        Log.d("==>", "MainActivity post resumed");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("==>", "MainActivity started");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("==>", "MainActivity stopped");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("==>", "MainActivity destroyed");
     }
 
     @Override
