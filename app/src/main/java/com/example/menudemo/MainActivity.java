@@ -27,15 +27,24 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Intent intent;
         switch (item.getItemId()){
+            case R.id.main_option_main:
+                Log.d("==>", "Selected option main");
+
+                intent = new Intent(this,MainActivity.class);
+                startActivity(intent);
+                return true;
             case R.id.main_option_1:
                 Log.d("==>", "Selected option 1");
 
-                Intent intent = new Intent(this, OptionOneActivity.class);
+                intent = new Intent(this, OptionOneActivity.class);
                 startActivity(intent);
                 return true;
             case R.id.main_option_2:
                 Log.d("==>", "Selected option 2");
+                intent = new Intent(this, OptionTwoActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

@@ -43,6 +43,8 @@ public class OptionOneActivity extends AppCompatActivity {
                 return true;
             case R.id.main_option_2:
                 Log.d("==>", "Selected option 2");
+                intent = new Intent(this, OptionTwoActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
