@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -23,4 +24,17 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.main_option_1:
+                Log.d("==>", "Selected option 1");
+                return true;
+            case R.id.main_option_2:
+                Log.d("==>", "Selected option 2");
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
